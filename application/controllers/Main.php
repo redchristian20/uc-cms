@@ -18,7 +18,7 @@ class Main extends CI_Controller {
         $data['workshops'] = $this->Workshops_model->get_workshops();
         $this->load->view('header');
         $this->load->view('home',$data);
-        $this->load->view('footer');
+        $this->load->view('footer',$data);
         
         //$this->load->view('csv_import');
 	}
