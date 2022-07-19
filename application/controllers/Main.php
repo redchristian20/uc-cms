@@ -32,8 +32,13 @@ class Main extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function home()
+    public function home($page = 'home')
     {
+        if ( ! file_exists(APPPATH.'views/'.$page.'.php'))
+        {
+                // Whoops, we don't have a page for that!
+                show_404();
+        }
         $this->load->model("Workshops_model");
         $data['workshops'] = $this->Workshops_model->get_workshops();
         $this->load->view('header');
