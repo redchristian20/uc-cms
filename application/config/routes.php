@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'main';
+$route['insert_workshop'] = 'main/insert_workshop';
 $route['(:any)'] = 'main/view/$1';
 
 $route['404_override'] = '';
