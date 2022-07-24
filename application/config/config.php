@@ -23,8 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'https://uc-cms.herokuapp.com/';
-$config['base_url'] = 'https://localhost/';
+$config['base_url'] = 'http://localhost';
 
 /*
 |--------------------------------------------------------------------------
@@ -327,7 +326,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/userguide3/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '(00|_3n(rYp+!0n_k3Y';
+$config['encryption_key'] = '';
 
 /*
 |--------------------------------------------------------------------------
