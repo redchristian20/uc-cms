@@ -39,7 +39,7 @@
             </ul>
             <ul class="form-inline my-2 my-lg-0 navbar-nav mr-auto">
             <li class="nav-item">
-                    <a class="nav-link" href="admin_login">Admin login</a>
+                    <a class="nav-link" href="admin">Admin</a>
                 </li>
             </ul>
         </div>
