@@ -33,9 +33,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="certificate_verification">Certificate Verification</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="create">Create Event</a>
-                </li>
             </ul>
             <ul class="form-inline my-2 my-lg-0 navbar-nav mr-auto">
             <li class="nav-item">
