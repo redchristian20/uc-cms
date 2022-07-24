@@ -4,7 +4,7 @@ class Main extends CI_Controller {
         public function __construct()
         {
                 parent::__construct();
-                $this->load->model('news_model');
+                $this->load->model("workshops_model");
                 $this->load->helper('url_helper');
                 $this->load->helper('url');
         }
@@ -16,7 +16,7 @@ class Main extends CI_Controller {
                         // Whoops, we don't have a page for that!
                         show_404();
                 }
-                $data['title'] = ucfirst($page); // Capitalize the first letter
+                $data['workshops'] = $this->workshops_model->get_workshops();
                 $this->load->view('templates/header', $data);
                 $this->load->view('pages/'.$page, $data);
                 $this->load->view('templates/footer', $data);
