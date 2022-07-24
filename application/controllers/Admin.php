@@ -5,14 +5,14 @@ class Admin extends CI_Controller {
         {
                 parent::__construct();
                 $this->load->model('news_model');
+                $this->load->model('workshops_model');
                 $this->load->helper('url_helper');
                 $this->load->helper('url');
         }
 
         public function index()
         {
-                $data['news'] = $this->news_model->get_news();
-                $data['title'] = 'News archive';
+                $data['workshops'] = $this->workshops_model->get_workshops();
                 $this->load->view('templates/header', $data);
                 $this->load->view('admin/index', $data);
                 $this->load->view('templates/footer');
