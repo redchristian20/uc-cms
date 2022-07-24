@@ -20,17 +20,14 @@ class Admin extends CI_Controller {
 
         public function view($slug = NULL)
         {
-                $data['news_item'] = $this->news_model->get_news($slug);
+                $data['workshop'] = $this->workshops_model->get_workshop_by_id($slug);
 
-                if (empty($data['news_item']))
+                if (empty($data['workshop']))
                 {
                         show_404();
                 }
-
-                $data['title'] = $data['news_item']['title'];
-
-                $this->load->view('templates/header', $data);
-                $this->load->view('news/view', $data);
+                $this->load->view('templates/header',$data);
+                $this->load->view('admin/view',$data);
                 $this->load->view('templates/footer');
         }
 
