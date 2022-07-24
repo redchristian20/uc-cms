@@ -37,7 +37,6 @@ class Workshops_model extends CI_Model
         $this->updated_at = date("Y-m-d, H:i:s");
         $this->db->insert('workshops', $this);
     }
-
     // Function that update workshop details
     public function update_workshop($workshop_array)
     {
@@ -60,7 +59,6 @@ class Workshops_model extends CI_Model
             return $row;
         }
     }
-
     // Function that gets workshop by a link
     public function get_workshop_by_link($workshop_link)
     {
@@ -71,8 +69,6 @@ class Workshops_model extends CI_Model
             return $row;
         }
     }
-
-    
 }
 ?>
 
