@@ -1,0 +1,1 @@
+<a class="nav-link" href="admin/create">Add event</a>
