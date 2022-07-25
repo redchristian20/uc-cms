@@ -30,6 +30,16 @@ class Admin extends CI_Controller {
                 $this->load->view('admin/view',$data);
                 $this->load->view('templates/footer');
         }
+        public function add_participants($workshop_id)
+        {
+                $data['workshop'] = $this->workshops_model->get_workshop_by_id($workshop_id);
+                if(isset($data))
+                {
+                $this->load->view('templates/header');
+                $this->load->view('admin/add_participants', $data);
+                $this->load->view('templeatesfooter', $data);
+                }
+        }       
 
         public function create()
         {
@@ -86,6 +96,8 @@ class Admin extends CI_Controller {
                 }
             }
         }
+
+        
 
         
 }
