@@ -9,11 +9,6 @@
         public $workshop_id;
         public $created_at;
         public $updated_at;
-
-        public function __construct()
-        {
-            $this->load->database();
-        }
         // Get the participants from the Database
         public function get_participants()
         {

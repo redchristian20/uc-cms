@@ -53,6 +53,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
+$route['default_controller'] = 'pages';
+
 /*
 $route['admin/add_participants/(:any)'] = 'admin/add_participants/$1';
 $route['admin/create'] = 'admin/create';

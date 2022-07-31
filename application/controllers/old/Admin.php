@@ -6,8 +6,6 @@ class Admin extends CI_Controller {
                 parent::__construct();
                 $this->load->model('news_model');
                 $this->load->model('workshops_model');
-                $this->load->helper('url_helper');
-                $this->load->helper('url');
         }
 
         public function index()

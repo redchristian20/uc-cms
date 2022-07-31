@@ -13,11 +13,7 @@ class Workshops_model extends CI_Model
     public $workshop_qr_link;
     public $created_at;
     public $updated_at;
-
-    public function __construct()
-    {
-        $this->load->database();
-    }
+    
     // Function that gets Workshops
     public function get_workshops()
     {

@@ -2,11 +2,6 @@
 // Class for importning CSV files.
 class Csv_import_model extends CI_Model
 {
-
-   public function __construct()
-   {
-      $this->load->database();
-   }
    // Select a CSV file
  function select($workshop_id)
  {
