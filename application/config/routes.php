@@ -52,20 +52,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
-$route['default_controller'] = 'pages';
-$route['(:any)'] = 'pages/view/$1';
-
-/*
-$route['admin/add_participants/(:any)'] = 'admin/add_participants/$1';
-$route['admin/create'] = 'admin/create';
-$route['admin/(:any)'] = 'admin/view/$1';
-$route['admin'] = 'admin';
-$route['main'] = 'main';
-$route['csv_import'] = 'csv_import';
-$route['news/create'] = 'news/create';
-$route['news/(:any)'] = 'news/view/$1';
-$route['news'] = 'news';
-$route['(:any)'] = 'pages/view/$1';
-$route['default_controller'] = 'pages';
-*/
+$route['default_controller'] = 'main';
+$route['home'] = 'main/home';
+$route['tests'] = 'main/tests';
+$route['admin_login'] = 'main/admin_login';
+$route['create_event'] = 'main/create_event';
+$route['certificate_verification'] = 'main/certificate_verification';
+$route['new_workshop'] = 'main/new_workshop';
+$route['insert_workshop'] = 'main/insert_workshop';
+$route['view_workshops'] = 'main/view_workshops';
+$route['show_workshop/(:any)'] = 'main/show_workshop/$1';
+$route['show_workshop_by_link/(:any)'] = 'main/show_workshop_by_link/$1';
+$route['add_participants/(:any)'] = 'main/add_participants/$1';
+$route['csv_import/load_data/(:any)'] = 'csv_import/load_data/$1';
+$route['show_certificate/(:any)'] = 'main/show_certificate/$1';

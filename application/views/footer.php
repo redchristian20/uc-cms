@@ -8,7 +8,7 @@ $(document).ready(function(){
 	function load_data()
 	{
 		$.ajax({
-			url:"<?=base_url()?>csv_import/load_data/<?=$workshop['id']?>",
+			url:"../csv_import/load_data/<?=$workshop['id']?>",
 			method:"POST",
 			success:function(data)
 			{
@@ -19,7 +19,7 @@ $(document).ready(function(){
 	$('#import_csv').on('submit', function(event){
 		event.preventDefault();
 		$.ajax({
-			url:"<?=base_url()?>csv_import/import/<?=$workshop['id']?>",
+			url:"../csv_import/import/<?=$workshop['id']?>",
 			method:"POST",
 			data:new FormData(this),
 			contentType:false,
