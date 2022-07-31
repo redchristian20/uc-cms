@@ -54,6 +54,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['default_controller'] = 'pages';
+$route['(:any)'] = 'pages/view/$1';
 
 /*
 $route['admin/add_participants/(:any)'] = 'admin/add_participants/$1';

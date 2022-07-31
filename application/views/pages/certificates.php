@@ -1,3 +1,4 @@
+<h1>Certificates</h1>
 <?php
     $output = '
     <h3>Certificate Verification</h3>
