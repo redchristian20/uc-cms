@@ -6,8 +6,8 @@ class Main extends CI_Controller {
 	public function index()
 	{
         
-        $this->load->model("Workshops_model");
-        $data['workshops'] = $this->Workshops_model->get_workshops();
+        
+        $data['workshops'] = $this->workshops_model->get_workshops();
         $this->load->view('header');
         $this->load->view('home',$data);
         $this->load->view('footer');
@@ -17,8 +17,8 @@ class Main extends CI_Controller {
 
     public function tests()
     {
-        $this->load->model("Workshops_model");
-        $data['workshops'] = $this->Workshops_model->get_workshops();
+        
+        $data['workshops'] = $this->workshops_model->get_workshops();
         $this->load->view('header');
         $this->load->view('view_workshops',$data);
         $this->load->view('footer');
@@ -27,8 +27,8 @@ class Main extends CI_Controller {
     // Function that loads the Workshop model
     public function home()
     {
-        $this->load->model("Workshops_model");
-        $data['workshops'] = $this->Workshops_model->get_workshops();
+        
+        $data['workshops'] = $this->workshops_model->get_workshops();
         $this->load->view('header');
         $this->load->view('home',$data);
         $this->load->view('footer');
@@ -37,8 +37,8 @@ class Main extends CI_Controller {
     // Function for the Admin Login
     public function admin_login()
     {
-        $this->load->model("Workshops_model");
-        $data['workshops'] = $this->Workshops_model->get_workshops();
+        
+        $data['workshops'] = $this->workshops_model->get_workshops();
         $this->load->view('header');
         $this->load->view('admin_login',$data);
         $this->load->view('footer');
@@ -46,7 +46,7 @@ class Main extends CI_Controller {
     // Function to verify each certification from a user
     public function certificate_verification()
     {
-        $this->load->model("Workshops_model");
+        
         $data['attendees'] = $this->csv_import_model->select_all();
         $this->load->view('header');
         $this->load->view('certificate_verification',$data);
@@ -63,8 +63,8 @@ class Main extends CI_Controller {
 
     // Function that views the workshop
     public function view_workshops(){
-        $this->load->model("Workshops_model");
-        $data['workshops'] = $this->Workshops_model->get_workshops();
+        
+        $data['workshops'] = $this->workshops_model->get_workshops();
         $this->load->view('header');
         $this->load->view('view_workshops',$data);
         $this->load->view('footer');
@@ -113,8 +113,8 @@ class Main extends CI_Controller {
             "workshop_link" => $workshop_link,
             "workshop_qr_link" => $qr_link);
             //Loads the workshop model
-            $this->load->model("Workshops_model");
-            $this->Workshops_model->insert_workshop($data);
+            
+            $this->workshops_model->insert_workshop($data);
             if($this->db->affected_rows()>0)
             {
                 $message = $arrayName = array('success' => 'Event Created');
@@ -128,8 +128,8 @@ class Main extends CI_Controller {
     // Function that shows a workshop by their workshop ID
     public function show_workshop($workshop_id)
     {
-        $this->load->model("Workshops_model");
-        $data['workshop'] = $this->Workshops_model->get_workshop_by_id($workshop_id);
+        
+        $data['workshop'] = $this->workshops_model->get_workshop_by_id($workshop_id);
         if(isset($data))
         {
             $this->load->view('header');
@@ -159,8 +159,8 @@ class Main extends CI_Controller {
     // Function that shows a workshop by a link
     public function show_workshop_by_link($workshop_link)
     {
-        $this->load->model("Workshops_model");
-        $data['workshop'] = $this->Workshops_model->get_workshop_by_link($workshop_link);
+        
+        $data['workshop'] = $this->workshops_model->get_workshop_by_link($workshop_link);
         if(isset($data))
         {
             $this->load->view('header');
@@ -172,8 +172,8 @@ class Main extends CI_Controller {
     // Function that adds participants
     public function add_participants($workshop_id)
     {
-        $this->load->model("Workshops_model");
-        $data['workshop'] = $this->Workshops_model->get_workshop_by_id($workshop_id);
+        
+        $data['workshop'] = $this->workshops_model->get_workshop_by_id($workshop_id);
         if(isset($data))
         {
             $this->load->view('header');
@@ -207,8 +207,8 @@ class Main extends CI_Controller {
     // Function that shows certificates
     public function show_certificate($certificate_code)
     {
-        $this->load->model("Certificates_model");
-        $data['certificate_data'] = $this->Certificates_model->get_certificates_by_code($certificate_code);
+        $this->load->model("certificates_model");
+        $data['certificate_data'] = $this->certificates_model->get_certificates_by_code($certificate_code);
         if(isset($data))
         {
             $this->load->view('header');
