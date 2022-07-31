@@ -52,18 +52,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
+/*
 $route['admin/add_participants/(:any)'] = 'admin/add_participants/$1';
 $route['admin/create'] = 'admin/create';
 $route['admin/(:any)'] = 'admin/view/$1';
 $route['admin'] = 'admin';
 $route['main'] = 'main';
 $route['csv_import'] = 'csv_import';
-
-
-
 $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
-
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages';
+*/
