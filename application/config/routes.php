@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['admin/add_participants/(:any)'] = 'admin/view/$1';
+$route['admin/add_participants/(:any)'] = 'admin/add_participants/$1';
 $route['admin/create'] = 'admin/create';
 $route['admin/(:any)'] = 'admin/view/$1';
 $route['admin'] = 'admin';
